@@ -51,8 +51,24 @@
   ],
   "pizzas": [
     {
-      "name": "Blazin' Inferno",
+      "name": "blazin inferno",
       "toppings": [
+        {
+          "id": 12,
+          "name": "tomato"
+        },
+        {
+          "id": 6,
+          "name": "mushroom"
+        },
+        {
+          "id": 5,
+          "name": "mozzarella"
+        },
+        {
+          "id": 3,
+          "name": "basil"
+        },
         {
           "id": 10,
           "name": "pepperoni"
@@ -62,20 +78,12 @@
           "name": "pepper"
         },
         {
-          "id": 3,
-          "name": "basil"
-        },
-        {
           "id": 4,
           "name": "chili"
         },
         {
-          "id": 7,
-          "name": "olive"
-        },
-        {
-          "id": 2,
-          "name": "bacon"
+          "id": 1,
+          "name": "anchovy"
         }
       ],
       "id": 1
