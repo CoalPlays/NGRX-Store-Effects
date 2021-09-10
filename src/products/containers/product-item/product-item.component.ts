@@ -8,6 +8,7 @@ import { Observable } from "rxjs/Observable";
 import { tap } from "rxjs/operators";
 @Component({
   selector: "product-item",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ["product-item.component.scss"],
   template: `
     <div class="product-item">
@@ -49,13 +50,18 @@ export class ProductItemComponent implements OnInit {
     this.store.dispatch(new fromStore.VisualiseToppings(event));
   }
 
-  onCreate(event: Pizza) {}
+  onCreate(event: Pizza) {
+    this.store.dispatch(new fromStore.CreatePizza(event));
+  }
 
-  onUpdate(event: Pizza) {}
+  onUpdate(event: Pizza) {
+    this.store.dispatch(new fromStore.UpdatePizza(event));
+  }
 
   onRemove(event: Pizza) {
     const remove = window.confirm("Are you sure?");
     if (remove) {
+      this.store.dispatch(new fromStore.RemovePizza(event));
     }
   }
 }
